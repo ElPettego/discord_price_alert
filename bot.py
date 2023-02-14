@@ -153,7 +153,7 @@ def main() -> None:
 
     @client.event
     async def on_message(message):
-        if message.author == client.user:
+        if message.author == client.user or message.guild:
             return
         # logging.info(f'{str(message.author)} - {str(client.user)}')
         await message.channel.send(USAGE)
